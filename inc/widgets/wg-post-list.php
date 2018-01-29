@@ -64,6 +64,9 @@ class Gtid_Post_Widget extends WP_Widget {
                         echo '</div>';
                     }
                     ?>
+                    <?php if ( $instance['show_date'] ) { ?>
+                        <span class="date_post"><?php the_time('G:i d/m/Y');?></span>
+                    <?php } ?>
                 </li>
             <?php
             endwhile;
@@ -89,6 +92,7 @@ class Gtid_Post_Widget extends WP_Widget {
                     'image_size'        => '',
                     'show_content'      => 'content-limit',
                     'content_limit'     => '',
+                    'show_date'         => '',
         		) 
         	);
         ?>
@@ -151,6 +155,11 @@ class Gtid_Post_Widget extends WP_Widget {
                 <input type="text" id="<?php echo esc_attr( $this->get_field_id( 'content_limit' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'content_limit' ) ); ?>" value="<?php echo esc_attr( intval( $instance['content_limit'] ) ); ?>" size="3" />
                 <?php _e( 'character', 'shtheme' ); ?>
             </label>
+        </p>
+
+        <p>
+            <input id="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>" type="checkbox" name="<?php echo esc_attr( $this->get_field_name( 'show_date' ) ); ?>" value="1" <?php checked( $instance['show_date'] ); ?>/>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>"><?php _e( 'Show Time Post', 'shtheme' ); ?></label>
         </p>
 
     <?php

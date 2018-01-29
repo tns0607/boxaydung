@@ -280,10 +280,11 @@ class sh_blog_shortcode {
 
 			$post_class = array( 'element', 'hentry', 'post-item' );
 
+			$atts['hide_meta'] 					= '1';
+			$atts['hide_viewmore'] 				= '0';
 			if ( $i == 1 ) {
 				$atts['hide_category'] 			= '0';
-				$atts['hide_viewmore']			= '1';
-				$image_size 					= 'rt_thumb300x200';
+				$image_size 					= 'sh_thumb410x270';
 
 				$html .= '<div class="col-md-6 first-element-layout">';
 
@@ -293,10 +294,9 @@ class sh_blog_shortcode {
 					$html .= '<div class="col-md-6 second-element-layout">';
 				}
 			} else {
-				$image_size 					= 'rt_thumb300x200';
+				$image_size 					= 'thumbnail';
 				$atts['hide_category'] 			= '0';
-				$atts['hide_meta'] 				= '0';
-				$atts['hide_viewmore'] 			= '0';
+				
 				$atts['hide_desc'] 				= '0';
 				
 				$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
@@ -313,10 +313,10 @@ class sh_blog_shortcode {
 
 	/**
 	 *
-	 * Blog style 6
+	 * Blog style 7
 	 *
 	 * @param  $the_query: Query get data; $atts: attribute
-	 * @return $html: html of blog style 6
+	 * @return $html: html of blog style 7
 	 *
 	 */
 	function sh_blog_style_7 ( $the_query, $atts ) {
@@ -334,29 +334,31 @@ class sh_blog_shortcode {
 
 			$post_class = array( 'element', 'hentry', 'post-item' );
 
+			$atts['hide_viewmore']				= '0';
+			$atts['hide_meta'] 					= '1';
+
 			if ( $i == 1 ) {
 				$atts['hide_category'] 			= '0';
-				$atts['hide_viewmore']			= '1';
-				$image_size 					= 'rt_thumb300x200';
+				$atts['titlefirst']				= '1';
+				$image_size 					= 'sh_thumb200x120';
 
 				$html .= '<div class="col-md-12 first-element-layout">';
 
 				$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
 				$html .= '</div>';
 				if( $posts_per_page > 1 ) {
-					$html .= '<div class="col-md-12 second-element-layout">';
+					$html .= '<div class="col-md-12 second-element-layout"><div class="second_inner">';
 				}
 			} else {
+				$atts['titlefirst']				= '0';
 				$atts['hide_thumb'] 			= '0';
 				$atts['hide_category'] 			= '0';
-				$atts['hide_meta'] 				= '0';
-				$atts['hide_viewmore'] 			= '0';
 				$atts['hide_desc'] 				= '0';
 				
 				$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
 			}
 			if ( $i == count( $the_query->posts ) ) {
-				$html .= '</div>';
+				$html .= '</div></div>';
 			}
 
 		}
@@ -383,11 +385,16 @@ class sh_blog_shortcode {
 			'hide_meta'						=> '0',
 			'hide_thumb'					=> '1',
 			'hide_desc'						=> '1',
+			'titlefirst'					=> '0',
 		), $atts ) );
 
 		$html = '';
 		$html .= '<article id="post-'. get_the_ID() .'" class="'. implode( ' ', get_post_class( $post_class ) ) .'"><div class="post-inner">';
 		// Check display thumb of post
+		if ( $titlefirst == '1' ) {
+			$html .= '<h3 class="entry-title"><a href="'. get_permalink() .'" title="'. get_the_title() .'">'. get_the_title() .'</a></h3>';
+		}
+
 		if ( $hide_thumb == '1' && has_post_thumbnail() ) :
 			$html .= '<div class="entry-thumb">';
 				$html .= '<a href="'. get_permalink() .'" title="'. get_the_title() .'">' . get_the_post_thumbnail( get_the_ID(), $image_size ) . '</a>';
@@ -410,19 +417,32 @@ class sh_blog_shortcode {
 					$html .= '</div>';
 				}
 			}
-			$html .= '<h3 class="entry-title"><a href="'. get_permalink() .'" title="'. get_the_title() .'">'. get_the_title() .'</a></h3>';
-			// Metadata
-			if ( $hide_meta == '1' ) {
-				$html .= '<div class="meta">';
-					$html .= '<span class="date-time"><i class="fa fa-clock-o" aria-hidden="true"></i>'. get_the_time('d/m/Y') .'</span>';
-					$comments_count = wp_count_comments( get_the_ID() );
-					$html .= '<span class="number-comment"><i class="fa fa-commenting-o" aria-hidden="true"></i>'. $comments_count->approved . ' ' . __( 'Comments', 'shtheme' ) . '</span>';
-				$html .= '</div>';
+			if ( $titlefirst == '0' ) {
+				$html .= '<h3 class="entry-title"><a href="'. get_permalink() .'" title="'. get_the_title() .'">'. get_the_title() .'</a>';
+					if ( $hide_meta == '1' ) {
+						// $html .= '<div class="meta">';
+							$html .= '<em class="date-time">'. get_the_time('(G:i d/m/Y)') .'</em>';
+							// $comments_count = wp_count_comments( get_the_ID() );
+							// $html .= '<span class="number-comment"><i class="fa fa-commenting-o" aria-hidden="true"></i>'. $comments_count->approved . ' ' . __( 'Comments', 'shtheme' ) . '</span>';
+						// $html .= '</div>';
+					}
+				$html .= '</h3>';
 			}
+			// Metadata
+			
 			// Check display description
 			if ( $hide_desc == '1' ) {
-				$html .= '<div class="entry-description">'. get_the_content_limit('200',' ') .'</div>';
+				$html .= '<div class="entry-description">'. get_the_content_limit('140',' ') .'</div>';
 			}
+
+			if ( $titlefirst == '1' && $hide_meta == '1' ) {
+				// $html .= '<div class="meta">';
+					$html .= '<em class="date-time">'. get_the_time('(G:i d/m/Y)') .'</em>';
+					// $comments_count = wp_count_comments( get_the_ID() );
+					// $html .= '<span class="number-comment"><i class="fa fa-commenting-o" aria-hidden="true"></i>'. $comments_count->approved . ' ' . __( 'Comments', 'shtheme' ) . '</span>';
+				// $html .= '</div>';
+			}
+
 			// Check display view more button
 			if ( $hide_viewmore == '1' ) {
 				$html .= '<a href="'. get_permalink() .'" title="'. get_the_title() .'" class="view-more">'. __( 'View more', 'shtheme' ) .' <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>';

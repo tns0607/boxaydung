@@ -222,6 +222,13 @@ Redux::setSection( $opt_name, array(
             'title'    => __( 'Favicon Image', 'shtheme' ),
             'compiler' => 'true',
         ),
+        array(
+            'id'       => 'opt_settings_logo_mobile',
+            'type'     => 'media',
+            'url'      => true,
+            'title'    => __( 'Logo Mobile Image', 'shtheme' ),
+            'compiler' => 'true',
+        ),
     )
 ) );
 
@@ -358,47 +365,86 @@ Redux::setSection( $opt_name, array(
     )
 ) );
 
-if ( class_exists( 'WooCommerce' ) ) {
-	Redux::setSection( $opt_name, array(
-        'title'            => __( 'Product', 'shtheme' ),
-        'id'               => 'homepage-product',
-        'subsection'       => true,
-        'fields'           => array(
-            array(
-                'id'       => 'list_cat_product',
-                'type'     => 'select',
-                'multi'    => true,
-                'title'    => __( 'Select categories', 'shtheme' ),
-                'data' => 'terms',
-				'args' => array(
-				    'taxonomies' => array( 'product_cat' ),
-				    'hide_empty' => false,
-				),
+Redux::setSection( $opt_name, array(
+    'title'            => __( 'News', 'shtheme' ).' 2',
+    'id'               => 'homepage-news2',
+    'subsection'       => true,
+    'fields'           => array(
+        array(
+            'id'       => 'list_cat_post2',
+            'type'     => 'select',
+            'multi'    => true,
+            'title'    => __( 'Select categories', 'shtheme' ),
+            'data'     => 'terms',
+            'args'     => array(
+                'taxonomies' => array( 'category' ),
+                'hide_empty' => false,
             ),
-            array(
-			    'id' 		=> 'number_product',
-			    'type' 		=> 'slider',
-			    'title' 	=> __('Enter number product', 'shtheme'),
-			    'default' 	=> 3,
-			    'min' 		=> 0,
-			    'step' 		=> 1,
-			    'max' 		=> 50,
-			    'display_value' => 'text'
-			),
-			array(
-			    'id' 		=> 'number_product_row',
-			    'type' 		=> 'slider',
-			    'title' 	=> __('Enter number product per row', 'shtheme'),
-			    'default' 	=> 3,
-			    'min' 		=> 1,
-			    'step' 		=> 1,
-			    'max' 		=> 6,
-			    'display_value' => 'text'
-			),
-        )
-    ) );
+        ),
+        array(
+            'id'        => 'number_news2',
+            'type'      => 'slider',
+            'title'     => __('Enter number post', 'shtheme'),
+            'default'   => 3,
+            'min'       => 0,
+            'step'      => 1,
+            'max'       => 50,
+            'display_value' => 'text'
+        ),
+        array(
+            'id'            => 'type_layout2',
+            'type'          => 'image_select',
+            'title'         => __('Blog Layout', 'shtheme'),
+            'permissions'   => 'administrator',
+            'options'  => array(
+                '1'      => array(
+                    'alt'   => 'Blog Layout 1', 
+                    'img'   => get_stylesheet_directory_uri().'/lib/images/theme-option/bloglayout1.png'
+                ),
+                '2'      => array(
+                    'alt'   => 'Blog Layout 2', 
+                    'img'   => get_stylesheet_directory_uri().'/lib/images/theme-option/bloglayout2.png'
+                ),
+                '3'      => array(
+                    'alt'   => 'Blog Layout 3', 
+                    'img'   => get_stylesheet_directory_uri().'/lib/images/theme-option/bloglayout3.png'
+                ),
+                '4'      => array(
+                    'alt'   => 'Blog Layout 4', 
+                    'img'   => get_stylesheet_directory_uri().'/lib/images/theme-option/bloglayout4.png'
+                ),
+                '5'      => array(
+                    'alt'   => 'Blog Layout 5', 
+                    'img'   => get_stylesheet_directory_uri().'/lib/images/theme-option/bloglayout5.png'
+                ),
+                '6'      => array(
+                    'alt'   => 'Blog Layout 6', 
+                    'img'   => get_stylesheet_directory_uri().'/lib/images/theme-option/bloglayout6.png'
+                ),
+                '7'      => array(
+                    'alt'   => 'Blog Layout 7', 
+                    'img'   => get_stylesheet_directory_uri().'/lib/images/theme-option/bloglayout7.png'
+                ),
+            ),
+            'default' => '1'
+        ),
+    )
+) );
 
-}
+Redux::setSection( $opt_name, array(
+    'title'            => __( 'Quick link', 'shtheme' ),
+    'id'               => 'homepage-ndcb',
+    'subsection'       => true,
+    // 'icon'             => 'el el-question-sign',
+    'fields'           => array(
+        array(
+            'id'          => 'opt-quicklink',
+            'type'        => 'slides',
+            'title'       => __('Quick link', 'shtheme'),
+            'subtitle'    => __('Add new link.', 'shtheme'),
+        ),
+    )
+) );
 
 // -> Blog Post
 Redux::setSection( $opt_name, array(

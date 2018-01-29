@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Web3B\n"
-"POT-Creation-Date: 2018-01-26 17:29+0700\n"
+"POT-Creation-Date: 2018-01-29 14:03+0700\n"
 "PO-Revision-Date: 2018-01-18 17:08+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -51,36 +51,36 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:44
+#: functions.php:26
 msgid "Primary"
 msgstr ""
 
-#: functions.php:73
+#: functions.php:74
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:75 functions.php:85 inc/function-woo.php:10
+#: functions.php:76 functions.php:86
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:83
+#: functions.php:84
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: functions.php:102
+#: functions.php:103
 msgid "Top Header"
 msgstr ""
 
-#: functions.php:104
+#: functions.php:105
 msgid "Top Header widget area"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:128
 #, php-format
 msgid "Footer %d"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:130
 #, php-format
 msgid "Footer %d widget area"
 msgstr ""
@@ -538,34 +538,6 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/function-woo.php:8
-msgid "Shop Sidebar"
-msgstr ""
-
-#: inc/function-woo.php:144 inc/options.php:611
-msgid "Information"
-msgstr ""
-
-#: inc/function-woo.php:145
-msgid "Gallery"
-msgstr ""
-
-#: inc/function-woo.php:146
-msgid "Video"
-msgstr ""
-
-#: inc/function-woo.php:147
-msgid "Attachments"
-msgstr ""
-
-#: inc/function-woo.php:177
-msgid "Contact"
-msgstr ""
-
-#: inc/function-woo.php:314
-msgid "View detail"
-msgstr ""
-
 #: inc/functions/breadcrumbs.php:21
 msgid "Search for keyword"
 msgstr ""
@@ -780,6 +752,10 @@ msgstr ""
 msgid "Instagram"
 msgstr ""
 
+#: inc/options.php:611
+msgid "Information"
+msgstr ""
+
 #: inc/options.php:618
 msgid "Telephone number"
 msgstr ""
@@ -863,9 +839,9 @@ msgid "Like Facebook"
 msgstr ""
 
 #: inc/widgets/wg-fblikebox.php:55 inc/widgets/wg-information.php:65
-#: inc/widgets/wg-page.php:40 inc/widgets/wg-post-list.php:96
-#: inc/widgets/wg-product-slider.php:103 inc/widgets/wg-social.php:73
-#: inc/widgets/wg-support.php:50 inc/widgets/wg-view-post-list.php:105
+#: inc/widgets/wg-page.php:40 inc/widgets/wg-post-list.php:100
+#: inc/widgets/wg-social.php:73 inc/widgets/wg-support.php:50
+#: inc/widgets/wg-view-post-list.php:105
 msgid "Title"
 msgstr ""
 
@@ -901,38 +877,38 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: inc/widgets/wg-page.php:53 inc/widgets/wg-post-list.php:114
+#: inc/widgets/wg-page.php:53 inc/widgets/wg-post-list.php:118
 #: inc/widgets/wg-view-post-list.php:121
 msgid "Show Featured Image"
 msgstr ""
 
-#: inc/widgets/wg-page.php:57 inc/widgets/wg-post-list.php:128
-#: inc/widgets/wg-product-slider.php:130 inc/widgets/wg-view-post-list.php:135
+#: inc/widgets/wg-page.php:57 inc/widgets/wg-post-list.php:132
+#: inc/widgets/wg-view-post-list.php:135
 msgid "Image Size"
 msgstr ""
 
-#: inc/widgets/wg-page.php:69 inc/widgets/wg-post-list.php:118
-#: inc/widgets/wg-product-slider.php:120 inc/widgets/wg-view-post-list.php:125
+#: inc/widgets/wg-page.php:69 inc/widgets/wg-post-list.php:122
+#: inc/widgets/wg-view-post-list.php:125
 msgid "Image Alignment"
 msgstr ""
 
-#: inc/widgets/wg-page.php:71 inc/widgets/wg-post-list.php:120
-#: inc/widgets/wg-product-slider.php:122 inc/widgets/wg-view-post-list.php:127
+#: inc/widgets/wg-page.php:71 inc/widgets/wg-post-list.php:124
+#: inc/widgets/wg-view-post-list.php:127
 msgid "None"
 msgstr ""
 
-#: inc/widgets/wg-page.php:72 inc/widgets/wg-post-list.php:121
-#: inc/widgets/wg-product-slider.php:123 inc/widgets/wg-view-post-list.php:128
+#: inc/widgets/wg-page.php:72 inc/widgets/wg-post-list.php:125
+#: inc/widgets/wg-view-post-list.php:128
 msgid "Left"
 msgstr ""
 
-#: inc/widgets/wg-page.php:73 inc/widgets/wg-post-list.php:122
-#: inc/widgets/wg-product-slider.php:124 inc/widgets/wg-view-post-list.php:129
+#: inc/widgets/wg-page.php:73 inc/widgets/wg-post-list.php:126
+#: inc/widgets/wg-view-post-list.php:129
 msgid "Right"
 msgstr ""
 
-#: inc/widgets/wg-page.php:74 inc/widgets/wg-post-list.php:123
-#: inc/widgets/wg-product-slider.php:125 inc/widgets/wg-view-post-list.php:130
+#: inc/widgets/wg-page.php:74 inc/widgets/wg-post-list.php:127
+#: inc/widgets/wg-view-post-list.php:130
 msgid "Center"
 msgstr ""
 
@@ -960,53 +936,48 @@ msgstr ""
 msgid "Displays featured posts with thumbnails"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:101 inc/widgets/wg-product-slider.php:108
-#: inc/widgets/wg-view-post-list.php:110
+#: inc/widgets/wg-post-list.php:105 inc/widgets/wg-view-post-list.php:110
 msgid "Number of Posts to Show"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:106 inc/widgets/wg-product-slider.php:113
+#: inc/widgets/wg-post-list.php:110
 msgid "Category"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:108 inc/widgets/wg-product-slider.php:115
+#: inc/widgets/wg-post-list.php:112
 msgid "Select category"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:140 inc/widgets/wg-view-post-list.php:147
+#: inc/widgets/wg-post-list.php:144 inc/widgets/wg-view-post-list.php:147
 msgid "Content Type"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:142 inc/widgets/wg-view-post-list.php:149
+#: inc/widgets/wg-post-list.php:146 inc/widgets/wg-view-post-list.php:149
 msgid "Show Content"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:143 inc/widgets/wg-view-post-list.php:150
+#: inc/widgets/wg-post-list.php:147 inc/widgets/wg-view-post-list.php:150
 msgid "Show Excerpt"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:144 inc/widgets/wg-view-post-list.php:151
+#: inc/widgets/wg-post-list.php:148 inc/widgets/wg-view-post-list.php:151
 msgid "Show Content Limit"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:145 inc/widgets/wg-view-post-list.php:152
+#: inc/widgets/wg-post-list.php:149 inc/widgets/wg-view-post-list.php:152
 msgid "No Content"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:150 inc/widgets/wg-view-post-list.php:157
+#: inc/widgets/wg-post-list.php:154 inc/widgets/wg-view-post-list.php:157
 msgid "Limit content to"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:152 inc/widgets/wg-view-post-list.php:159
+#: inc/widgets/wg-post-list.php:156 inc/widgets/wg-view-post-list.php:159
 msgid "character"
 msgstr ""
 
-#: inc/widgets/wg-product-slider.php:13
-msgid "3B - Products Slider"
-msgstr ""
-
-#: inc/widgets/wg-product-slider.php:15
-msgid "Display vertical slide list product"
+#: inc/widgets/wg-post-list.php:162
+msgid "Show Time Post"
 msgstr ""
 
 #: inc/widgets/wg-social.php:14
@@ -1071,6 +1042,18 @@ msgstr ""
 msgid "Post date"
 msgstr ""
 
+#: index.php:28
+msgid "Latest news HOT"
+msgstr ""
+
+#: index.php:29
+msgid "Latest news"
+msgstr ""
+
+#: index.php:30
+msgid "Featured news"
+msgstr ""
+
 #: search.php:18
 #, php-format
 msgid "Search for keyword: %s"
@@ -1125,65 +1108,6 @@ msgstr ""
 
 #: template-parts/content.php:116
 msgid "Related posts"
-msgstr ""
-
-#: woocommerce/cart/mini-cart.php:87
-msgid "Remove this item"
-msgstr ""
-
-#: woocommerce/single-product/meta.php:31
-msgid "SKU:"
-msgstr ""
-
-#: woocommerce/single-product/meta.php:31
-msgid "N/A"
-msgstr ""
-
-#: woocommerce/single-product/meta.php:35
-msgid "Category:"
-msgid_plural "Categories:"
-msgstr[0] ""
-msgstr[1] ""
-
-#: woocommerce/single-product/meta.php:37
-msgid "Tag:"
-msgid_plural "Tags:"
-msgstr[0] ""
-msgstr[1] ""
-
-#: woocommerce/single-product/product-attributes.php:28
-msgid "Weight"
-msgstr ""
-
-#: woocommerce/single-product/product-attributes.php:35
-msgid "Dimensions"
-msgstr ""
-
-#: woocommerce/single-product/product-image.php:54
-msgid "Awaiting product image"
-msgstr ""
-
-#: woocommerce/single-product/rating.php:37
-#, php-format
-msgid "%s customer review"
-msgid_plural "%s customer reviews"
-msgstr[0] ""
-msgstr[1] ""
-
-#: woocommerce/single-product/related.php:36
-msgid "Related Products"
-msgstr ""
-
-#: woocommerce/single-product/tabs/additional-information.php:25
-msgid "Additional information"
-msgstr ""
-
-#: woocommerce/single-product/tabs/description.php:25
-msgid "Description"
-msgstr ""
-
-#: woocommerce/single-product/up-sells.php:27
-msgid "You may also like&hellip;"
 msgstr ""
 
 #. Theme Name of the plugin/theme

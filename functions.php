@@ -149,13 +149,6 @@ require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
 // Load Shortcode
 require get_template_directory() . '/inc/shortcode/shortcode-blog.php';
-require get_template_directory() . '/inc/shortcode/shortcode-product.php';
-
-
-// Load Function Woocomerce
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/function-woo.php';
-}
 
 // Load Widget
 require get_template_directory() . '/inc/widgets/wg-post-list.php';
@@ -165,9 +158,6 @@ require get_template_directory() . '/inc/widgets/wg-page.php';
 require get_template_directory() . '/inc/widgets/wg-view-post-list.php';
 require get_template_directory() . '/inc/widgets/wg-information.php';
 require get_template_directory() . '/inc/widgets/wg-social.php';
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/widgets/wg-product-slider.php';
-}
 
 function shtheme_lib_scripts(){
 	// Bootstrap
@@ -192,5 +182,5 @@ add_action( 'wp_enqueue_scripts', 'shtheme_lib_scripts' , 1 );
 /**
  * Add Thumb Size
 **/
-add_image_size( 'sh_thumb300x200', 300, 200, array( 'center', 'center' ) );
-
+add_image_size( 'sh_thumb410x270', 410, 270, array( 'center', 'center' ) );
+add_image_size( 'sh_thumb200x120', 200, 120, array( 'center', 'center' ) );

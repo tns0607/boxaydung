@@ -24,19 +24,6 @@
 <div id="page" class="site">
 
 	<header id="masthead" <?php header_class();?> role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-
-		<!-- Start Menu Mobile -->
-		<div class="navbar navbar-fixed-top">
-			<a id="showmenu" class="">
-				<span class="hamburger hamburger--collapse">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</span>
-			</a>
-			<a class="navbar-brand" href="<?php echo get_site_url();?>">Menu</a>
-		</div>
-		<!-- End Menu Mobile -->
 		
 		<?php
 		if( $sh_option['display-topheader-widget'] == 1 ) {
@@ -67,13 +54,20 @@
 			</div><!-- .site-branding -->
 
 			<div class="header-content">
+				<a id="showmenu" class="hidden-md hidden-lg">
+					<span class="hamburger hamburger--collapse">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</span>
+				</a>
 				<div class="logo">
 					<?php display_logo();?>
 				</div>
 				<nav id="site-navigation" class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
-				<?php do_action( 'sh_after_menu' ) ?>
+				<?php echo get_search_form( );?>
 			</div>
 			
 		</div>
