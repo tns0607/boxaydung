@@ -6,7 +6,6 @@
  *
  * @package SH_Theme
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -15,16 +14,11 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
-
 <?php global $sh_option;?>
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
-
 <?php do_action( 'sh_before_header' );?>
-
 <div id="page" class="site">
-
 	<header id="masthead" <?php header_class();?> role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-		
 		<?php
 		if( $sh_option['display-topheader-widget'] == 1 ) {
 			?>
@@ -45,14 +39,12 @@
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 				endif;
-
 				$description = get_bloginfo( 'description', 'display' );
 				if ( $description || is_customize_preview() ) : ?>
 					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 				<?php
 				endif; ?>
 			</div><!-- .site-branding -->
-
 			<div class="header-content">
 				<a id="showmenu" class="hidden-md hidden-lg">
 					<span class="hamburger hamburger--collapse">
@@ -63,18 +55,46 @@
 				</a>
 				<div class="logo">
 					<?php display_logo();?>
+					<script type="text/javascript">
+						function startTime() {
+						    var today = new Date();
+						    var dd 	= today.getDate();
+						    var mm 	= today.getMonth()+1;
+						    var yyyy = today.getFullYear();
+						    var h 	= today.getHours();
+						    var m 	= today.getMinutes();
+						    var s 	= today.getSeconds();
+						    m = checkTime(m);
+						    s = checkTime(s);
+						    if(dd<10) {
+							    dd = '0'+dd;
+							}
+							if(mm<10) {
+							    mm = '0'+mm;
+							}
+						    document.getElementById('txt').innerHTML = mm + '/' + dd + '/' + yyyy + " " + h + ":" + m + ":" + s;
+						    
+						    var t = setTimeout(startTime, 500);
+						}
+						function checkTime(i) {
+						    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+						    return i;
+						}
+						jQuery(document).ready(function($) {
+							startTime();
+						});
+					</script>
+					<div class="date-current">
+						<div id="txt"></div>
+					</div>
 				</div>
 				<nav id="site-navigation" class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php echo get_search_form( );?>
 			</div>
-			
 		</div>
 	</header><!-- #masthead -->
-	
 	<div id="content" class="site-content">
-
 		<?php do_action( 'sh_before_main_content' ) ?>
-
 		<div class="container">

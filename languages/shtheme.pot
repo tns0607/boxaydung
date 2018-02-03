@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Web3B\n"
-"POT-Creation-Date: 2018-01-29 14:03+0700\n"
+"POT-Creation-Date: 2018-02-03 09:43+0700\n"
 "PO-Revision-Date: 2018-01-18 17:08+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -20,12 +20,6 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-
-#: archive.php:46 inc/shortcode/shortcode-blog.php:33
-#: inc/shortcode/shortcode-blog.php:380 inc/widgets/wg-post-list.php:59
-#: search.php:40
-msgid "Read more"
-msgstr ""
 
 #: comments.php:31
 #, php-format
@@ -51,38 +45,195 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:26
+#: functions.php:21
 msgid "Primary"
 msgstr ""
 
-#: functions.php:74
+#: functions.php:62
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:76 functions.php:86
+#: functions.php:64 functions.php:73 inc/function-woo.php:10
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:84
+#: functions.php:71
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:88
 msgid "Top Header"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:90
 msgid "Top Header widget area"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:109
 #, php-format
 msgid "Footer %d"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:111
 #, php-format
 msgid "Footer %d widget area"
+msgstr ""
+
+#: functions.php:162
+msgctxt "Question General Name"
+msgid "Question"
+msgstr ""
+
+#: functions.php:163
+msgctxt "Question Singular Name"
+msgid "Question"
+msgstr ""
+
+#: functions.php:164 functions.php:165 functions.php:195
+msgid "Question"
+msgstr ""
+
+#: functions.php:166
+msgid "Item Archives"
+msgstr ""
+
+#: functions.php:167
+msgid "Item Attributes"
+msgstr ""
+
+#: functions.php:168 functions.php:228
+msgid "Parent Item:"
+msgstr ""
+
+#: functions.php:169 functions.php:226
+msgid "All Items"
+msgstr ""
+
+#: functions.php:170 functions.php:230
+msgid "Add New Item"
+msgstr ""
+
+#: functions.php:171
+msgid "Add New"
+msgstr ""
+
+#: functions.php:172
+msgid "New Item"
+msgstr ""
+
+#: functions.php:173 functions.php:231
+msgid "Edit Item"
+msgstr ""
+
+#: functions.php:174 functions.php:232
+msgid "Update Item"
+msgstr ""
+
+#: functions.php:175 functions.php:233
+msgid "View Item"
+msgstr ""
+
+#: functions.php:176
+msgid "View Items"
+msgstr ""
+
+#: functions.php:177
+msgid "Search Item"
+msgstr ""
+
+#: functions.php:178
+msgid "Not found"
+msgstr ""
+
+#: functions.php:179
+msgid "Not found in Trash"
+msgstr ""
+
+#: functions.php:180
+msgid "Featured Image"
+msgstr ""
+
+#: functions.php:181
+msgid "Set featured image"
+msgstr ""
+
+#: functions.php:182
+msgid "Remove featured image"
+msgstr ""
+
+#: functions.php:183
+msgid "Use as featured image"
+msgstr ""
+
+#: functions.php:184
+msgid "Insert into item"
+msgstr ""
+
+#: functions.php:185
+msgid "Uploaded to this item"
+msgstr ""
+
+#: functions.php:186 functions.php:241
+msgid "Items list"
+msgstr ""
+
+#: functions.php:187 functions.php:242
+msgid "Items list navigation"
+msgstr ""
+
+#: functions.php:188
+msgid "Filter items list"
+msgstr ""
+
+#: functions.php:223
+msgctxt "Topic General Name"
+msgid "Topic"
+msgstr ""
+
+#: functions.php:224
+msgctxt "Topic Singular Name"
+msgid "Topic"
+msgstr ""
+
+#: functions.php:225 page-request.php:45 single-question.php:127
+#: taxonomy-topic.php:60
+msgid "Topic"
+msgstr ""
+
+#: functions.php:227
+msgid "Parent Item"
+msgstr ""
+
+#: functions.php:229
+msgid "New Item Name"
+msgstr ""
+
+#: functions.php:234
+msgid "Separate items with commas"
+msgstr ""
+
+#: functions.php:235
+msgid "Add or remove items"
+msgstr ""
+
+#: functions.php:236
+msgid "Choose from the most used"
+msgstr ""
+
+#: functions.php:237
+msgid "Popular Items"
+msgstr ""
+
+#: functions.php:238
+msgid "Search Items"
+msgstr ""
+
+#: functions.php:239
+msgid "Not Found"
+msgstr ""
+
+#: functions.php:240
+msgid "No items"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:334
@@ -538,6 +689,34 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
+#: inc/function-woo.php:8
+msgid "Shop Sidebar"
+msgstr ""
+
+#: inc/function-woo.php:144 inc/options.php:657
+msgid "Information"
+msgstr ""
+
+#: inc/function-woo.php:145
+msgid "Gallery"
+msgstr ""
+
+#: inc/function-woo.php:146
+msgid "Video"
+msgstr ""
+
+#: inc/function-woo.php:147
+msgid "Attachments"
+msgstr ""
+
+#: inc/function-woo.php:177
+msgid "Contact"
+msgstr ""
+
+#: inc/function-woo.php:314
+msgid "View detail"
+msgstr ""
+
 #: inc/functions/breadcrumbs.php:21
 msgid "Search for keyword"
 msgstr ""
@@ -590,239 +769,240 @@ msgstr ""
 msgid "Favicon Image"
 msgstr ""
 
-#: inc/options.php:230
-msgid "Header"
+#: inc/options.php:229
+msgid "Logo Mobile Image"
 msgstr ""
 
 #: inc/options.php:237
+msgid "Header"
+msgstr ""
+
+#: inc/options.php:244
 msgid "Header Layout"
 msgstr ""
 
-#: inc/options.php:253
+#: inc/options.php:260
 msgid "Enable Page Title Bar"
 msgstr ""
 
-#: inc/options.php:255 inc/options.php:263 inc/options.php:420
-#: inc/options.php:428 inc/options.php:436 inc/options.php:461
-#: inc/options.php:511 inc/options.php:530 inc/options.php:678
-#: inc/options.php:686
+#: inc/options.php:262 inc/options.php:270 inc/options.php:466
+#: inc/options.php:474 inc/options.php:482 inc/options.php:507
+#: inc/options.php:557 inc/options.php:576 inc/options.php:724
+#: inc/options.php:732
 msgid "Enable"
 msgstr ""
 
-#: inc/options.php:256 inc/options.php:264 inc/options.php:421
-#: inc/options.php:429 inc/options.php:437 inc/options.php:462
-#: inc/options.php:512 inc/options.php:531 inc/options.php:679
-#: inc/options.php:687
+#: inc/options.php:263 inc/options.php:271 inc/options.php:467
+#: inc/options.php:475 inc/options.php:483 inc/options.php:508
+#: inc/options.php:558 inc/options.php:577 inc/options.php:725
+#: inc/options.php:733
 msgid "Disable"
 msgstr ""
 
-#: inc/options.php:261
+#: inc/options.php:268
 msgid "Enable Top Header Widget"
 msgstr ""
 
-#: inc/options.php:271
+#: inc/options.php:278
 msgid "Footer"
 msgstr ""
 
-#: inc/options.php:278
+#: inc/options.php:285
 msgid "Enter number column footer"
 msgstr ""
 
-#: inc/options.php:290
+#: inc/options.php:297
 msgid "Home Page"
 msgstr ""
 
-#: inc/options.php:296
+#: inc/options.php:303 inc/options.php:369
 msgid "News"
 msgstr ""
 
-#: inc/options.php:304 inc/options.php:371
+#: inc/options.php:311 inc/options.php:377
 msgid "Select categories"
 msgstr ""
 
-#: inc/options.php:314
+#: inc/options.php:321 inc/options.php:387
 msgid "Enter number post"
 msgstr ""
 
-#: inc/options.php:324
+#: inc/options.php:331 inc/options.php:397
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/options.php:363
-msgid "Product"
+#: inc/options.php:435 inc/options.php:443
+msgid "Quick link"
 msgstr ""
 
-#: inc/options.php:381
-msgid "Enter number product"
+#: inc/options.php:444
+msgid "Add new link."
 msgstr ""
 
-#: inc/options.php:391 inc/options.php:485 inc/options.php:547
-msgid "Enter number product per row"
-msgstr ""
-
-#: inc/options.php:405
+#: inc/options.php:451
 msgid "Post"
 msgstr ""
 
-#: inc/options.php:411
+#: inc/options.php:457
 msgid "Single post"
 msgstr ""
 
-#: inc/options.php:418
+#: inc/options.php:464
 msgid "Display buttons share social"
 msgstr ""
 
-#: inc/options.php:426
+#: inc/options.php:472
 msgid "Display post navigation"
 msgstr ""
 
-#: inc/options.php:434 inc/options.php:528
+#: inc/options.php:480 inc/options.php:574
 msgid "Display related products"
 msgstr ""
 
-#: inc/options.php:446
+#: inc/options.php:492
 msgid "WooCommerce"
 msgstr ""
 
-#: inc/options.php:452
+#: inc/options.php:498
 msgid "Main Settings"
 msgstr ""
 
-#: inc/options.php:459
+#: inc/options.php:505
 msgid "Display Widget Shop Sidebar"
 msgstr ""
 
-#: inc/options.php:468
+#: inc/options.php:514
 msgid "Category Product"
 msgstr ""
 
-#: inc/options.php:475
+#: inc/options.php:521
 msgid "Enter number product per page"
 msgstr ""
 
-#: inc/options.php:496
+#: inc/options.php:531 inc/options.php:593
+msgid "Enter number product per row"
+msgstr ""
+
+#: inc/options.php:542
 msgid "Single Product"
 msgstr ""
 
-#: inc/options.php:503
+#: inc/options.php:549
 msgid "Setting General"
 msgstr ""
 
-#: inc/options.php:509
+#: inc/options.php:555
 msgid "Display attributes product"
 msgstr ""
 
-#: inc/options.php:522
+#: inc/options.php:568
 msgid "Related Product"
 msgstr ""
 
-#: inc/options.php:536
+#: inc/options.php:582
 msgid "Enter number related product"
 msgstr ""
 
-#: inc/options.php:567
+#: inc/options.php:613
 msgid "Social"
 msgstr ""
 
-#: inc/options.php:574
+#: inc/options.php:620
 msgid "Facebook"
 msgstr ""
 
-#: inc/options.php:579
+#: inc/options.php:625
 msgid "Twitter"
 msgstr ""
 
-#: inc/options.php:584
+#: inc/options.php:630
 msgid "Google +"
 msgstr ""
 
-#: inc/options.php:589
+#: inc/options.php:635
 msgid "Youtube"
 msgstr ""
 
-#: inc/options.php:594
+#: inc/options.php:640
 msgid "Linkedin"
 msgstr ""
 
-#: inc/options.php:599
+#: inc/options.php:645
 msgid "Pinterest"
 msgstr ""
 
-#: inc/options.php:604
+#: inc/options.php:650
 msgid "Instagram"
 msgstr ""
 
-#: inc/options.php:611
-msgid "Information"
-msgstr ""
-
-#: inc/options.php:618
+#: inc/options.php:664
 msgid "Telephone number"
 msgstr ""
 
-#: inc/options.php:623 inc/widgets/wg-information.php:37
+#: inc/options.php:669 inc/widgets/wg-information.php:37
 #: inc/widgets/wg-information.php:77 inc/widgets/wg-support.php:76
 #: inc/widgets/wg-support.php:107 inc/widgets/wg-support.php:200
 msgid "Email"
 msgstr ""
 
-#: inc/options.php:628 inc/widgets/wg-information.php:31
+#: inc/options.php:674 inc/widgets/wg-information.php:31
 #: inc/widgets/wg-information.php:69
 msgid "Address"
 msgstr ""
 
-#: inc/options.php:633
+#: inc/options.php:679
 msgid "Google Maps"
 msgstr ""
 
-#: inc/options.php:634
+#: inc/options.php:680
 msgid "Google map embed"
 msgstr ""
 
-#: inc/options.php:641
+#: inc/options.php:687
 msgid "Insert code"
 msgstr ""
 
-#: inc/options.php:648
+#: inc/options.php:694
 msgid "Insert code to header"
 msgstr ""
 
-#: inc/options.php:653
+#: inc/options.php:699
 msgid "Insert code to footer"
 msgstr ""
 
-#: inc/options.php:660
+#: inc/options.php:706
 msgid "3B Developer"
 msgstr ""
 
-#: inc/options.php:669
+#: inc/options.php:715
 msgid "Woocommerce"
 msgstr ""
 
-#: inc/options.php:676
+#: inc/options.php:722
 msgid "Tooltip"
 msgstr ""
 
-#: inc/options.php:684
+#: inc/options.php:730
 msgid "Cart"
 msgstr ""
 
-#: inc/options.php:795
+#: inc/options.php:841
 msgid "Section via hook"
 msgstr ""
 
-#: inc/options.php:796
+#: inc/options.php:842
 msgid ""
 "<p class=\"description\">This is a section created by adding a filter to the "
 "sections array. Can be used by child themes to add/remove sections from the "
 "options.</p>"
 msgstr ""
 
-#: inc/shortcode/shortcode-blog.php:419
-msgid "Comments"
+#: inc/shortcode/shortcode-blog.php:26 inc/shortcode/shortcode-blog.php:311
+#: inc/widgets/wg-post-list.php:59 search.php:40
+msgid "Read more"
 msgstr ""
 
-#: inc/shortcode/shortcode-blog.php:428 inc/widgets/wg-view-post-list.php:68
+#: inc/shortcode/shortcode-blog.php:372 inc/widgets/wg-view-post-list.php:68
 msgid "View more"
 msgstr ""
 
@@ -840,8 +1020,8 @@ msgstr ""
 
 #: inc/widgets/wg-fblikebox.php:55 inc/widgets/wg-information.php:65
 #: inc/widgets/wg-page.php:40 inc/widgets/wg-post-list.php:100
-#: inc/widgets/wg-social.php:73 inc/widgets/wg-support.php:50
-#: inc/widgets/wg-view-post-list.php:105
+#: inc/widgets/wg-product-slider.php:103 inc/widgets/wg-social.php:73
+#: inc/widgets/wg-support.php:50 inc/widgets/wg-view-post-list.php:105
 msgid "Title"
 msgstr ""
 
@@ -883,32 +1063,32 @@ msgid "Show Featured Image"
 msgstr ""
 
 #: inc/widgets/wg-page.php:57 inc/widgets/wg-post-list.php:132
-#: inc/widgets/wg-view-post-list.php:135
+#: inc/widgets/wg-product-slider.php:130 inc/widgets/wg-view-post-list.php:135
 msgid "Image Size"
 msgstr ""
 
 #: inc/widgets/wg-page.php:69 inc/widgets/wg-post-list.php:122
-#: inc/widgets/wg-view-post-list.php:125
+#: inc/widgets/wg-product-slider.php:120 inc/widgets/wg-view-post-list.php:125
 msgid "Image Alignment"
 msgstr ""
 
 #: inc/widgets/wg-page.php:71 inc/widgets/wg-post-list.php:124
-#: inc/widgets/wg-view-post-list.php:127
+#: inc/widgets/wg-product-slider.php:122 inc/widgets/wg-view-post-list.php:127
 msgid "None"
 msgstr ""
 
 #: inc/widgets/wg-page.php:72 inc/widgets/wg-post-list.php:125
-#: inc/widgets/wg-view-post-list.php:128
+#: inc/widgets/wg-product-slider.php:123 inc/widgets/wg-view-post-list.php:128
 msgid "Left"
 msgstr ""
 
 #: inc/widgets/wg-page.php:73 inc/widgets/wg-post-list.php:126
-#: inc/widgets/wg-view-post-list.php:129
+#: inc/widgets/wg-product-slider.php:124 inc/widgets/wg-view-post-list.php:129
 msgid "Right"
 msgstr ""
 
 #: inc/widgets/wg-page.php:74 inc/widgets/wg-post-list.php:127
-#: inc/widgets/wg-view-post-list.php:130
+#: inc/widgets/wg-product-slider.php:125 inc/widgets/wg-view-post-list.php:130
 msgid "Center"
 msgstr ""
 
@@ -936,15 +1116,16 @@ msgstr ""
 msgid "Displays featured posts with thumbnails"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:105 inc/widgets/wg-view-post-list.php:110
+#: inc/widgets/wg-post-list.php:105 inc/widgets/wg-product-slider.php:108
+#: inc/widgets/wg-view-post-list.php:110
 msgid "Number of Posts to Show"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:110
+#: inc/widgets/wg-post-list.php:110 inc/widgets/wg-product-slider.php:113
 msgid "Category"
 msgstr ""
 
-#: inc/widgets/wg-post-list.php:112
+#: inc/widgets/wg-post-list.php:112 inc/widgets/wg-product-slider.php:115
 msgid "Select category"
 msgstr ""
 
@@ -978,6 +1159,14 @@ msgstr ""
 
 #: inc/widgets/wg-post-list.php:162
 msgid "Show Time Post"
+msgstr ""
+
+#: inc/widgets/wg-product-slider.php:13
+msgid "3B - Products Slider"
+msgstr ""
+
+#: inc/widgets/wg-product-slider.php:15
+msgid "Display vertical slide list product"
 msgstr ""
 
 #: inc/widgets/wg-social.php:14
@@ -1042,21 +1231,51 @@ msgstr ""
 msgid "Post date"
 msgstr ""
 
-#: index.php:28
+#: index.php:61
 msgid "Latest news HOT"
 msgstr ""
 
-#: index.php:29
+#: index.php:62
 msgid "Latest news"
 msgstr ""
 
-#: index.php:30
+#: index.php:63
 msgid "Featured news"
+msgstr ""
+
+#: index.php:232
+msgid "Readers asked, CDMI answer"
+msgstr ""
+
+#: index.php:235
+msgid "Answer readers"
+msgstr ""
+
+#: index.php:238
+msgid "Send a question"
 msgstr ""
 
 #: search.php:18
 #, php-format
 msgid "Search for keyword: %s"
+msgstr ""
+
+#: single-question.php:22 taxonomy-topic.php:19
+msgid "Readers asked"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: single-question.php:37 template-parts/content.php:32
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: single-question.php:82
+msgid "Related question"
+msgstr ""
+
+#: taxonomy-topic.php:38
+msgid "Sender"
 msgstr ""
 
 #: template-parts/content-none.php:12
@@ -1092,22 +1311,75 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#. translators: %s: Name of current post.
-#: template-parts/content.php:37
-#, php-format
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: template-parts/content.php:94
+#: template-parts/content.php:83
 msgid "Next Post"
 msgstr ""
 
-#: template-parts/content.php:102
+#: template-parts/content.php:91
 msgid "Previous Post"
 msgstr ""
 
-#: template-parts/content.php:116
+#: template-parts/content.php:102
 msgid "Related posts"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:87
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:31
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:31
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:35
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/meta.php:37
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/product-attributes.php:28
+msgid "Weight"
+msgstr ""
+
+#: woocommerce/single-product/product-attributes.php:35
+msgid "Dimensions"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:54
+msgid "Awaiting product image"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:37
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/related.php:36
+msgid "Related Products"
+msgstr ""
+
+#: woocommerce/single-product/tabs/additional-information.php:25
+msgid "Additional information"
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:25
+msgid "Description"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:27
+msgid "You may also like&hellip;"
 msgstr ""
 
 #. Theme Name of the plugin/theme

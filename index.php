@@ -11,12 +11,10 @@
  *
  * @package SH_Theme
  */
-
 global $sh_option;
 get_header(); ?>
 	<div id="primary" class="content-sidebar-wrap">
 		<main id="main" class="site-main" role="main">
-
 			<!-- ---------------------  --------------------- -->
 			<div class="row">
 				<div class="col-md-6">
@@ -64,7 +62,6 @@ get_header(); ?>
 							<li><a data-toggle="tab" href="#latest"><?php _e( 'Latest news', 'shtheme' );?></a></li>
 							<li><a data-toggle="tab" href="#featured"><?php _e( 'Featured news', 'shtheme' );?></a></li>
 						</ul>
-
 						<div class="tab-content">
 							<div id="latesthot" class="element_tab tab-pane fade in active">
 								<?php
@@ -175,8 +172,6 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			
-
 			<!-- --------------------- News --------------------- -->
 			<?php
 			if( $sh_option['number_news'] ) {
@@ -197,7 +192,6 @@ get_header(); ?>
 				echo '</div>';
 			}
 			?>
-
 			<!-- --------------------- News --------------------- -->
 			<?php
 			if( $sh_option['number_news2'] ) {
@@ -216,8 +210,7 @@ get_header(); ?>
 				echo '</div>';
 			}
 			?>
-
-			
+			<!-- --------------------- Quick link --------------------- -->
 			<?php
 			$question = $sh_option['opt-quicklink'];
 			if( $question ) {
@@ -234,13 +227,59 @@ get_header(); ?>
 				echo '</div>';
 			}
 			?>
-			
+			<!-- --------------------- Question --------------------- -->
+			<div class="question">
+				<h2 class="heading"><a><?php _e('Readers asked, CDMI answer','shtheme');?></a></h2>
+				<ul class="sub_title_question list-unstyled">
+					<li>
+						<span><?php _e('Answer readers','shtheme');?></span>
+					</li>
+					<li>
+						<a href="<?php echo get_page_link(83);?>"><?php _e('Send a question','shtheme');?></a>
+					</li>
+				</ul>
+				<div class="wrap_question">
+					<div class="sh-blog-shortcode style-7"><div class="row">
+						<?php
+						$i = 0;
+						$post_class = array( 'element', 'hentry', 'post-item' );
+						$args = array(
+							'post_type'			=>	'question',
+							'posts_per_page'	=>	5,
+						);
+						$the_query = new WP_Query( $args );
+						// The Loop
+						if ( $the_query->have_posts() ) :
+						while ( $the_query->have_posts() ) : $the_query->the_post();$i++;
+							if( $i == 1 ) {
+								echo '<div class="col-md-12 first-element-layout">';
+									echo '<article id="post-'. get_the_ID() .'" class="'. implode( ' ', get_post_class( $post_class ) ) .'"><div class="post-inner">';
+										echo '<h3 class="entry-title"><a href="'. get_permalink() .'" title="'. get_the_title() .'">'. get_the_title() .'</a></h3>';
+										echo '<div class="entry-description">'. get_the_content_limit('300',' ') .'</div>';
+									echo '</article>';
+								echo '</div>';
+								echo '<div class="col-md-12 second-element-layout"><div class="second_inner">';
+							} else {
+								echo '<article id="post-'. get_the_ID() .'" class="'. implode( ' ', get_post_class( $post_class ) ) .'"><div class="post-inner">';
+									echo '<h3 class="entry-title"><a href="'. get_permalink() .'" title="'. get_the_title() .'">'. get_the_title() .'</a></h3>';
+								echo '</article>';
+							}
+							if ( $i == $the_query->post_count ) {
+								echo '</div></div>';
+							}
+						endwhile;
+						endif;
+						// Reset Post Data
+						wp_reset_postdata();
+						?>
+					</div></div>
+				</div>
+			</div>
+			<?php
 
+			?>
 		</main><!-- #main -->
-
 		<?php do_action( 'sh_after_content' );?>
-
 	</div><!-- #primary -->
-	
 <?php
 get_footer();

@@ -6,17 +6,11 @@
  *
  * @package SH_Theme
  */
-
 class sh_blog_shortcode {
-
 	public static $args;
-
 	public function __construct() {
-
 		add_shortcode( 'shblog', array( $this, 'render' ) );
-
 	}
-
 	/**
 	 * Render the shortcode
 	 * @param  array $args	 Shortcode paramters
@@ -25,7 +19,6 @@ class sh_blog_shortcode {
 	 */
 	function render( $atts, $content = '') {
 		$html = '';
-
 		extract( shortcode_atts( array(
 			'style'   						=> '1',
 			'posts_per_page'				=> '5',
@@ -37,7 +30,6 @@ class sh_blog_shortcode {
 			'hide_thumb'					=> '1',
 			'hide_desc'						=> '1'
 		), $atts ) );
-
 		$args = array(
 			'post_type' => 'post',
 			'tax_query' => array(
@@ -49,13 +41,10 @@ class sh_blog_shortcode {
 			),
 			'posts_per_page'	=> $posts_per_page,
 		);
-
 		$the_query = new WP_Query( $args );
 		// The Loop
 		if ( $the_query->have_posts() ) {
-
 			$html .= '<div class="sh-blog-shortcode style-'. $style .'">';
-
 			switch ( $style ) {
 				case '1':
 					$html .= $this->sh_blog_style_1( $the_query, $atts );
@@ -82,15 +71,10 @@ class sh_blog_shortcode {
 					$html .= $this->sh_general_post_html( $the_query, $atts );
 					break;
 			}
-
 			$html .= '</div>';
-
 		}
-
 		return $html;
-		
 	}
-
 	/**
 	 *
 	 * Blog style 1
@@ -100,27 +84,20 @@ class sh_blog_shortcode {
 	 *
 	 */
 	function sh_blog_style_1 ( $the_query, $atts ) {
-
 		$i = 0;
 		$html = '';
 		$image_size = 'sh_thumb300x200';
-
 		$html .= '<div class="row">';
 		while ( $the_query->have_posts() ) { $the_query->the_post(); $i++;
-
 			$post_class = array( 'element', 'hentry', 'post-item' );
-
 			$atts['hide_category'] 		= '0';
 			$post_class[] 				= 'col-md-12';
-
 			$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
-
 		}
 		wp_reset_postdata();
 		$html .= '</div>';
 		return $html;
 	}
-	
 	/**
 	 *
 	 * Blog style 2
@@ -134,27 +111,20 @@ class sh_blog_shortcode {
 			'style'   						=> '2',
 			'posts_per_page'				=> '10',
 		), $atts ) );
-
 		$i = 0;
 		$html = '';
 		$image_size = 'sh_thumb300x200';
-
 		$html .= '<div class="row">';
 		while ( $the_query->have_posts() ) { $the_query->the_post(); $i++;
-
 			$post_class = array( 'element', 'hentry', 'post-item' );
-
 			$atts['hide_category'] 		= '0';
 			$post_class[] 				= 'col-sm-6';
-
 			$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
-
 		}
 		wp_reset_postdata();
 		$html .= '</div>';
 		return $html;
 	}
-
 	/**
 	 *
 	 * Blog style 3
@@ -168,27 +138,20 @@ class sh_blog_shortcode {
 			'style'   						=> '3',
 			'posts_per_page'				=> '10',
 		), $atts ) );
-
 		$i = 0;
 		$html = '';
 		$image_size = 'sh_thumb300x200';
-
 		$html .= '<div class="row">';
 		while ( $the_query->have_posts() ) { $the_query->the_post(); $i++;
-
 			$post_class = array( 'element', 'hentry', 'post-item' );
-
 			$atts['hide_category'] 		= '0';
 			$post_class[] 				= 'col-md-4 col-sm-6 col-xs-6';
-
 			$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
-
 		}
 		wp_reset_postdata();
 		$html .= '</div>';
 		return $html;
 	}
-
 	/**
 	 *
 	 * Blog style 4
@@ -202,27 +165,20 @@ class sh_blog_shortcode {
 			'style'   						=> '4',
 			'posts_per_page'				=> '10',
 		), $atts ) );
-
 		$i = 0;
 		$html = '';
 		$image_size = 'sh_thumb300x200';
-
 		$html .= '<div class="row">';
 		while ( $the_query->have_posts() ) { $the_query->the_post(); $i++;
-
 			$post_class = array( 'element', 'hentry', 'post-item' );
-
 			$atts['hide_category'] 		= '0';
 			$post_class[] 				= 'col-md-3 col-sm-6 col-xs-6';
-
 			$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
-
 		}
 		wp_reset_postdata();
 		$html .= '</div>';
 		return $html;
 	}
-
 	/**
 	 *
 	 * Blog style 5
@@ -236,27 +192,20 @@ class sh_blog_shortcode {
 			'style'   						=> '5',
 			'posts_per_page'				=> '10',
 		), $atts ) );
-
 		$i = 0;
 		$html = '';
 		$image_size = 'sh_thumb300x200';
-
 		$html .= '<div class="row">';
 		while ( $the_query->have_posts() ) { $the_query->the_post(); $i++;
-
 			$post_class = array( 'element', 'hentry', 'post-item' );
-
 			$atts['hide_category'] 		= '0';
 			$post_class[] 				= 'col-md-6';
-
 			$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
-
 		}
 		wp_reset_postdata();
 		$html .= '</div>';
 		return $html;
 	}
-
 	/**
 	 *
 	 * Blog style 6
@@ -270,24 +219,18 @@ class sh_blog_shortcode {
 			'style'   						=> '6',
 			'posts_per_page'				=> '10',
 		), $atts ) );
-
 		$i = 0;
 		$html = '';
 		$image_size = 'sh_thumb300x200';
-
 		$html .= '<div class="row">';
 		while ( $the_query->have_posts() ) { $the_query->the_post(); $i++;
-
 			$post_class = array( 'element', 'hentry', 'post-item' );
-
 			$atts['hide_meta'] 					= '1';
 			$atts['hide_viewmore'] 				= '0';
 			if ( $i == 1 ) {
 				$atts['hide_category'] 			= '0';
 				$image_size 					= 'sh_thumb410x270';
-
 				$html .= '<div class="col-md-6 first-element-layout">';
-
 				$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
 				$html .= '</div>';
 				if( $posts_per_page > 1 ) {
@@ -296,21 +239,17 @@ class sh_blog_shortcode {
 			} else {
 				$image_size 					= 'thumbnail';
 				$atts['hide_category'] 			= '0';
-				
 				$atts['hide_desc'] 				= '0';
-				
 				$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
 			}
 			if ( $i == count( $the_query->posts ) ) {
 				$html .= '</div>';
 			}
-
 		}
 		wp_reset_postdata();
 		$html .= '</div>';
 		return $html;
 	}
-
 	/**
 	 *
 	 * Blog style 7
@@ -324,26 +263,19 @@ class sh_blog_shortcode {
 			'style'   						=> '7',
 			'posts_per_page'				=> '10',
 		), $atts ) );
-
 		$i = 0;
 		$html = '';
 		$image_size = 'sh_thumb300x200';
-
 		$html .= '<div class="row">';
 		while ( $the_query->have_posts() ) { $the_query->the_post(); $i++;
-
 			$post_class = array( 'element', 'hentry', 'post-item' );
-
 			$atts['hide_viewmore']				= '0';
 			$atts['hide_meta'] 					= '1';
-
 			if ( $i == 1 ) {
 				$atts['hide_category'] 			= '0';
 				$atts['titlefirst']				= '1';
 				$image_size 					= 'sh_thumb200x120';
-
 				$html .= '<div class="col-md-12 first-element-layout">';
-
 				$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
 				$html .= '</div>';
 				if( $posts_per_page > 1 ) {
@@ -354,19 +286,16 @@ class sh_blog_shortcode {
 				$atts['hide_thumb'] 			= '0';
 				$atts['hide_category'] 			= '0';
 				$atts['hide_desc'] 				= '0';
-				
 				$html .= $this->sh_general_post_html( $post_class, $atts, $image_size );
 			}
 			if ( $i == count( $the_query->posts ) ) {
 				$html .= '</div></div>';
 			}
-
 		}
 		wp_reset_postdata();
 		$html .= '</div>';
 		return $html;
 	}
-
 	/**
 	 *
 	 * General post html
@@ -387,14 +316,12 @@ class sh_blog_shortcode {
 			'hide_desc'						=> '1',
 			'titlefirst'					=> '0',
 		), $atts ) );
-
 		$html = '';
 		$html .= '<article id="post-'. get_the_ID() .'" class="'. implode( ' ', get_post_class( $post_class ) ) .'"><div class="post-inner">';
 		// Check display thumb of post
 		if ( $titlefirst == '1' ) {
 			$html .= '<h3 class="entry-title"><a href="'. get_permalink() .'" title="'. get_the_title() .'">'. get_the_title() .'</a></h3>';
 		}
-
 		if ( $hide_thumb == '1' && has_post_thumbnail() ) :
 			$html .= '<div class="entry-thumb">';
 				$html .= '<a href="'. get_permalink() .'" title="'. get_the_title() .'">' . get_the_post_thumbnail( get_the_ID(), $image_size ) . '</a>';
@@ -429,12 +356,10 @@ class sh_blog_shortcode {
 				$html .= '</h3>';
 			}
 			// Metadata
-			
 			// Check display description
 			if ( $hide_desc == '1' ) {
 				$html .= '<div class="entry-description">'. get_the_content_limit('140',' ') .'</div>';
 			}
-
 			if ( $titlefirst == '1' && $hide_meta == '1' ) {
 				// $html .= '<div class="meta">';
 					$html .= '<em class="date-time">'. get_the_time('(G:i d/m/Y)') .'</em>';
@@ -442,7 +367,6 @@ class sh_blog_shortcode {
 					// $html .= '<span class="number-comment"><i class="fa fa-commenting-o" aria-hidden="true"></i>'. $comments_count->approved . ' ' . __( 'Comments', 'shtheme' ) . '</span>';
 				// $html .= '</div>';
 			}
-
 			// Check display view more button
 			if ( $hide_viewmore == '1' ) {
 				$html .= '<a href="'. get_permalink() .'" title="'. get_the_title() .'" class="view-more">'. __( 'View more', 'shtheme' ) .' <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>';
@@ -451,6 +375,5 @@ class sh_blog_shortcode {
 		$html .= '</div></article>';
 		return $html;
 	}
-
 }
 new sh_blog_shortcode();

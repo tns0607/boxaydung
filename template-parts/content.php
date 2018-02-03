@@ -6,30 +6,25 @@
  *
  * @package SH_Theme
  */
-
 global $sh_option;
 postview_set(get_the_ID());
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 	<?php if( $sh_option['display-pagetitlebar'] == '0' || empty( $sh_option['display-pagetitlebar'] )) : ?>
 		<header class="entry-header">
 			<?php
 			if ( is_single() ) :
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h1 class="entry-title title-content">', '</h1>' );
 			else :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="entry-title title-content"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
-
 			?>
 		</header><!-- .entry-header -->
 	<?php endif;?>
-
 	<div class="entry-meta">
 		<span class="entry-time"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('g:i a d/m/Y') ?></span>
 		<span class="entry-view"><i class="fa fa-eye" aria-hidden="true"></i> <?php echo postview_get(get_the_ID());?></span>
 	</div>
-
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
@@ -37,15 +32,12 @@ postview_set(get_the_ID());
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'shtheme' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
-
 			echo get_the_tag_list('<p>Keywords: ',', ','</p>');
-
 			// wp_link_pages( array(
 			// 	'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'shtheme' ),
 			// 	'after'  => '</div>',
 			// ) );
 		?>
-
 		<?php if( $sh_option['display-sharepost'] == '1' ) : ?>
 			<div class="socials-share">
 				<div id="fb-root"></div>
@@ -57,12 +49,10 @@ postview_set(get_the_ID());
 				  fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));</script>
 				<div class="fb-like" data-href="<?php the_permalink();?>" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-
 				<!-- Đặt thẻ này vào phần đầu hoặc ngay trước thẻ đóng phần nội dung của bạn. -->
 				<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'vi'}</script>
 				<!-- Đặt thẻ này vào nơi bạn muốn nút chia sẻ kết xuất. -->
 				<div class="g-plus" data-action="share"></div>
-				
 				<script>window.twttr = (function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0],
 				t = window.twttr || {};
@@ -80,7 +70,6 @@ postview_set(get_the_ID());
 				<a class="twitter-share-button" href="<?php the_permalink();?>">Tweet</a>
 			</div>
 		<?php endif;?>
-
 		<?php
 		$next_id 		= get_next_post()->ID;
 		$previous_id 	= get_previous_post()->ID;
@@ -107,10 +96,7 @@ postview_set(get_the_ID());
 				</div>
 			</div>
 		<?php endif;?>
-
-
 	</div><!-- .entry-content -->
-
 	<?php if( $sh_option['display-relatedpost'] == '1' ) : ?>
 		<div class="related-posts">
 			<h4 class="td-related-title"><span><?php _e( 'Related posts', 'shtheme' );?></span></h4>
@@ -150,5 +136,4 @@ postview_set(get_the_ID());
 	    	</ul>
 		</div>
 	<?php endif;?>
-
 </article><!-- #post-## -->
